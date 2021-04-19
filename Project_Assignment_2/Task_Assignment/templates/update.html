@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+    <div class='container'>
+        <h1> Update Friend  </h1>
+        <br/>
+        <form action="/update/{{task_to_update.id}}" METHOD="POST">
+            <input type="text" placeholder = "Name" name = "name", value = " {{task_to_update.name}}">
+            <input type="text" placeholder = "Description" name = "description", value = " {{task_to_update.description}}">
+            <input type="submit" value = "Update" class="btn btn-secondary">
+        </form>
+        <ul>
+        </ul>
+    </div>
+
+{% endblock %}

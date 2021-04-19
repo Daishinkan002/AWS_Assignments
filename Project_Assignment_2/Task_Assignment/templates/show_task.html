@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block content%}
+
+    <div class='container'>
+        <h1>All Tasks Due ------ </h1>
+        <ul>
+        {% for task in tasks %}
+            <ol> {{ task.name }}  ----> {{task.description}} <a href="/update/{{task.id }} " class="btn btn-outline-secondary btn-sm"> Update</a><a href="/delete/{{ task.id }} " class="btn btn-outline-danger btn-sm"> Delete </a> </ol>
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

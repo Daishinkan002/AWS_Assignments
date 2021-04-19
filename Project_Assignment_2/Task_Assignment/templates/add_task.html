@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+    <div class='container'>
+        <h1> TASK TO BE ADDED </h1>
+        <br/><br/>
+        <form action="/add_task" METHOD="POST">
+            <input type="text" placeholder = "Task" name = "name">
+            <input type="text" placeholder = "Description" name = "description">
+            <input type="submit" value = "Add Task" class="btn btn-secondary">
+        </form>
+        <ul>
+        </br>
+        </ul>
+    </div>
+
+{% endblock %}
